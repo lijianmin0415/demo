@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.SysCollectMapper">
+
+    <update id="updateByName">
+        UPDATE SYS_COLLECT  SET FLAG=#{flag},STATUS=#{success} WHERE JOB_NAME=#{name} and FLAG=#{oneFlag}
+    </update>
+    <update id="updateStatus">
+        UPDATE SYS_COLLECT  SET FLAG=#{flag},STATUS=#{success} WHERE JOB_NAME=#{name}
+    </update>
+    <update id="updateErrorStatus">
+        UPDATE SYS_COLLECT  SET STATUS=#{errorStatus} WHERE STATUS=#{ingStatus}
+    </update>
+</mapper>

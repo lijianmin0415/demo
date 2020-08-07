@@ -1,0 +1,24 @@
+server:
+  port: 8802
+
+spring:
+  ##邮箱发送配置
+  mail:
+    default-encoding: utf-8
+    host: smtp.qq.com
+    username: shuqikeji@qq.com
+    password: trhbxmkgtpqzcjfa
+    properties.mail.smtp.auth: true
+    #      properties.mail.smtp.port: 465 #端口号465或587
+    properties.mail.display.sendmail: aaa #可以任意
+    properties.mail.display.sendname: bbb #可以任意
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+#邮箱格式
+title:
+  【数起科技有限公司邮箱验证服务】

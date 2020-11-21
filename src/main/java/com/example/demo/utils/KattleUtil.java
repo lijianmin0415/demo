@@ -23,23 +23,23 @@ public class KattleUtil {
 //    private static String name;
 //    @Value("${PASS}")
 //    private static String pass;
-    private static String name="PDINT";
-    private static String type="MS SQL Server";
-    private static String access="Native(JDBC)";
-    private static String host="10.3.24.84";
-    private static String db="PDINT";
-    private static String part="1433";
-    private static String user="sa";
-    private static String pass="password01!";
+//    private static String name="PDINT";
+//    private static String type="MS SQL Server";
+//    private static String access="Native(JDBC)";
+//    private static String host="10.3.24.84";
+//    private static String db="PDINT";
+//    private static String part="1433";
+//    private static String user="sa";
+//    private static String pass="password01!";
 
-//    private static String name = "ljm";
-//    private static String type = "MySQL";
-//    private static String access = "Native(JDBC)";
-//    private static String host = "192.168.100.32";
-//    private static String db = "house";
-//    private static String part = "3306";
-//    private static String user = "remote";
-//    private static String pass = "Shuqi@12345";
+    private static String name = "ljm";
+    private static String type = "MySQL";
+    private static String access = "Native(JDBC)";
+    private static String host = "192.168.100.32";
+    private static String db = "house";
+    private static String part = "3306";
+    private static String user = "remote";
+    private static String pass = "Shuqi@12345";
 
     /**
      * @author ljm
@@ -80,7 +80,7 @@ public class KattleUtil {
     public static boolean runJob(KettleDatabaseRepository rep, String jobName, String jobPath) throws Exception {
 
         try {
-            RepositoryDirectoryInterface dir = rep.findDirectory("/"+jobPath);//根据指定的字符串路径 找到目录
+            RepositoryDirectoryInterface dir = rep.findDirectory("/");//根据指定的字符串路径 找到目录
             log.info("【--------------路径名称：{}，jobName:{},jobPath:{}】",dir,jobName,jobPath);
             //加载指定的job
             JobMeta jobMeta = rep.loadJob(rep.getJobId(jobName, dir), null);

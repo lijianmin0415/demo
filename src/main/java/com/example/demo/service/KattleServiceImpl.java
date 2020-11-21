@@ -18,7 +18,8 @@ public class KattleServiceImpl implements KattleService {
     private SysCollectMapper sysCollectMapper;
     @Override
     public List<SysCollect> getCollectList() {
-        return sysCollectMapper.selectAll();
+        List<SysCollect> sysCollects = sysCollectMapper.selectAll();
+        return sysCollects;
     }
 
     @Override

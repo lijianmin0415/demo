@@ -80,7 +80,7 @@ public class KattleUtil {
     public static boolean runJob(KettleDatabaseRepository rep, String jobName, String jobPath) throws Exception {
 
         try {
-            RepositoryDirectoryInterface dir = rep.findDirectory("/");//根据指定的字符串路径 找到目录
+            RepositoryDirectoryInterface dir = rep.findDirectory("/"+jobPath);//根据指定的字符串路径 找到目录
             log.info("【--------------路径名称：{}，jobName:{},jobPath:{}】",dir,jobName,jobPath);
             //加载指定的job
             JobMeta jobMeta = rep.loadJob(rep.getJobId(jobName, dir), null);

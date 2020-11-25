@@ -1,5 +1,6 @@
 server:
   port: 8802
+  context-path: /kattle
 
 spring:
   ##邮箱发送配置
